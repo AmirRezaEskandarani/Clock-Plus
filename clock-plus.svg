@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#0f0f1a"/>
+    </linearGradient>
+    <linearGradient id="ac5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00ffb3"/>
+      <stop offset="100%" stop-color="#00e5a0"/>
+    </linearGradient>
+    <filter id="glow5" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="256" height="256" rx="56" fill="url(#bg5)"/>
+
+  <!-- حلقه اصلی -->
+  <circle cx="128" cy="128" r="80" fill="none" stroke="url(#ac5)"
+          stroke-width="6" opacity="0.4"/>
+
+  <!-- نشانگرها -->
+  <g stroke="#00e5a0" stroke-width="5" stroke-linecap="round" opacity="0.7">
+    <line x1="128" y1="58" x2="128" y2="72"/>
+    <line x1="128" y1="184" x2="128" y2="198"/>
+    <line x1="58" y1="128" x2="72" y2="128"/>
+    <line x1="184" y1="128" x2="198" y2="128"/>
+  </g>
+
+  <!-- عقربه ساعت -->
+  <line x1="128" y1="128" x2="128" y2="88"
+        stroke="#eaeaf0" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- عقربه دقیقه -->
+  <line x1="128" y1="128" x2="166" y2="150"
+        stroke="url(#ac5)" stroke-width="5" stroke-linecap="round"
+        filter="url(#glow5)"/>
+
+  <!-- مرکز -->
+  <circle cx="128" cy="128" r="9" fill="#00ffb3"/>
+  <circle cx="128" cy="128" r="4" fill="#1a1a2e"/>
+
+  <!-- نشان + کوچک در گوشه (نشانه محاسبه) -->
+  <g stroke="#00ffb3" stroke-width="3" stroke-linecap="round"
+     filter="url(#glow5)" opacity="0.9">
+    <line x1="200" y1="46" x2="216" y2="46"/>
+    <line x1="208" y1="38" x2="208" y2="54"/>
+  </g>
+</svg>

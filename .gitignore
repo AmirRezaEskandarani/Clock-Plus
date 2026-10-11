@@ -1,0 +1,18 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# PyInstaller
+build/
+*.spec
+
+# Local application settings / temp
+timecalc_settings.json
+.test_perm
+*.tmp
+
+# Release output folder
+Output/
+*.zip
+*.exe
